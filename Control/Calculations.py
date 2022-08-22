@@ -11,7 +11,7 @@ g = 9.81        # gravity
 side = 0.150    # side length (meter)
 
 # Momentum wheel
-thickness = 0.1       # meter
+thickness = 0.01       # meter
 density = 7130      # kg/m^3 , cast iron
 outer_diameter = 0.100     # meter
 inner_diameter =0.080     # meter
@@ -25,8 +25,8 @@ torque = 0.0696      # N*m
 acceletation = torque/wheel_inertia
 
 # Transmission 
-larger_gear = 50    # teeth number
-smaller_gear = 12
+larger_gear = 1    # teeth number
+smaller_gear = 1
 
 # Conservation of energy
 height_change = side*np.sqrt(2)/2       # Approximate as we don't know CM location
