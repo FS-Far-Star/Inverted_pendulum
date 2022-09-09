@@ -6,22 +6,25 @@ import os
 os.system('cls')
 
 # Overall
-total_mass = 10  # kg
+total_mass = 2  # kg
 g = 9.81        # gravity
 side = 0.150    # side length (meter)
 
 # Momentum wheel
-thickness = 0.01       # meter
+    # inputs
+thickness = 0.02       # meter
 density = 7130      # kg/m^3 , cast iron
 outer_diameter = 0.100     # meter
-inner_diameter =0.080     # meter
+inner_diameter = 0.080     # meter
+
+    # calculations
 wheel_inertia = 0.5*density*np.pi*(outer_diameter**4-inner_diameter**4)*thickness
 wheel_mass = np.pi*(outer_diameter**2-inner_diameter**2)*thickness*density
 print('Momentum wheel inertia',round(wheel_inertia,4),'kg m^2')
 print('Momentum wheel mass',round(wheel_mass,2),'kg')
 
 # Motor specification
-torque = 0.0696      # N*m
+torque = 0.51/100     # N*m
 acceletation = torque/wheel_inertia
 
 # Transmission 
